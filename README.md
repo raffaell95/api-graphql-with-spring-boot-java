@@ -19,26 +19,26 @@ To test requests via graphql, simply access: `http://localhost:8080/graphiql?pat
 
 - Request:
   
-  ```
-  query{
-      purchases(page: 0, size: 1){
-        id
-        quantity
-        status
-        date
-        customer{
-          id
-          name
-          email
-        }
-        product{
-          id
-          name
-          amount
-        }
-      }
+```
+query{
+  purchases(page: 0, size: 1){
+    id
+    quantity
+    status
+    date
+    customer{
+      id
+      name
+      email
+    }
+    product{
+      id
+      name
+      amount
+    }
   }
-  ```
+}
+```
 
   
 - Response:
