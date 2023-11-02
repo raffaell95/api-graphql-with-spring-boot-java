@@ -17,7 +17,7 @@ To test requests via graphql, simply access: `http://localhost:8080/graphiql?pat
 
 ### Example:
 
-- Request:
+Request:
   
 ```
 query{
@@ -41,7 +41,7 @@ query{
 ```
 
   
-- Response:
+Response:
 
 ```
 {
