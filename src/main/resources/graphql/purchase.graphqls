@@ -1,0 +1,34 @@
+type Purchase{
+    id: ID
+    quantity: Int!
+    status: String!
+    date: Date!
+    customer: Customer
+    product: Product!
+}
+
+input PurchaseInput {
+    id: ID
+    quantity: Int!
+    status: String!
+    clientId: ID!
+    productId: ID!
+}
+
+type PurchaseDetail {
+    purchaseId: ID!
+    customer: String!
+    product: String!
+    quantity: Int!
+}
+
+extend type Query {
+    purchase(id: ID): Purchase
+    purchases(page: Int = 0, size: Int = 2): [Purchase]
+    purchaseDetail: [PurchaseDetail]
+}
+
+extend type Mutation {
+    savePurchase(purchase: PurchaseInput):Purchase
+    deletePurchase(id: ID):Boolean
+}
