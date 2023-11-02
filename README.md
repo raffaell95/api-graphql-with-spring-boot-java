@@ -20,7 +20,7 @@ To test requests via graphql, simply access: `http://localhost:8080/graphiql?pat
 - Request:
   
   ```
-    query{
+  query{
       purchases(page: 0, size: 1){
         id
         quantity
